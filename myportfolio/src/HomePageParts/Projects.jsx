@@ -33,7 +33,7 @@ function Projects() {
       title: "ByteVote",
       description:
         "An online voting platform built with the MERN stack for managing votes and candidates securely.",
-      tech: ["MongoDB", "Express", "React", "Node.js"],
+      tech: ["Mysql", "Express", "React", "Node.js"],
       github: "https://github.com/VanJoshua-dev/ByteVote",
       image: bytevote,
     },
