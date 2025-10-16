@@ -17,8 +17,8 @@ function Projects() {
       description:
         "A sleek and modern personal portfolio built with React.js, Tailwind CSS, and Framer Motion. It showcases projects, skills, and contact details with smooth animations.",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/VanJoshua-dev",
-      live: "https://vanjoshua-dev.netlify.app",
+      github: "https://github.com/VanJoshua-dev/portfolio",
+      live: "https://vanjoshua-dev.vercel.app/",
       image: portfolio,
     },
     {
@@ -69,7 +69,7 @@ function Projects() {
   // Scroll the carousel when clicking left/right
   const scroll = (direction) => {
     if (!carouselRef.current) return;
-    const scrollAmount = 350;
+    const scrollAmount = 310;
     if (direction === "left") {
       carouselRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     } else {
@@ -103,19 +103,19 @@ function Projects() {
       {/* Carousel */}
       <div
         ref={carouselRef}
-        className="w-full max-w-6xl flex gap-8 overflow-x-auto scroll-smooth scrollbar-hide px-4"
+        className="w-full max-w-6xl flex gap-8 overflow-x-auto scroll-smooth scrollbar-hide px-2"
       >
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="min-w-[320px] sm:min-w-[400px] bg-gray-800/50 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden transition-all duration-300"
+            className="min-w-[280px] sm:min-w-[400px] bg-gray-800/50 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden transition-all duration-300"
             whileHover={{ scale: 1.05 }}
           >
             <div className="relative w-full h-48 overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-fit hover:scale-110 transition-transform duration-500"
               />
             </div>
 
