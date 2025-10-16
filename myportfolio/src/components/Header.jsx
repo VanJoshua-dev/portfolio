@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/_.png";
+import logo from "../assets/vanjoshua-logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
 import clx from "clsx";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -80,7 +80,7 @@ function Header() {
         <img
           src={logo}
           alt="van.dev"
-          className="h-6 cursor-pointer"
+          className="h-8 cursor-pointer"
           onClick={() => handleScrollTo("intro", "/")}
         />
 
