@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import profile from "../assets/profile.png";
 import { IoIosMail } from "react-icons/io";
-import { FaPhoneAlt, FaGithub, FaFacebook, FaTiktok, FaInstagram } from "react-icons/fa";
-
+import {
+  FaPhoneAlt,
+  FaGithub,
+  FaFacebook,
+  FaTiktok,
+  FaInstagram,
+} from "react-icons/fa";
+import Swal from "sweetalert2";
 function Contact() {
   const socials = [
     {
@@ -27,6 +33,21 @@ function Contact() {
       title: "Instagram",
     },
   ];
+  const [form, setForm] = useState();
+  const handleSend = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      icon: "warning",
+      title: "Feature Coming Soon!",
+      text: "The message form isn’t functional yet. Please check back later.",
+      confirmButtonText: "Okay",
+      buttonsStyling: false,
+      customClass: {
+        confirmButton:
+          "bg-gradient-to-r cursor-target from-blue-500 to-cyan-400 text-white font-semibold px-6 py-2 rounded-md hover:opacity-90 hover:scale-125 transition-all transform duration-300",
+      },
+    });
+  };
 
   return (
     <motion.section
@@ -37,7 +58,7 @@ function Contact() {
       viewport={{ once: true }}
       className="flex flex-col md:flex-row items-center justify-center gap-10 bg-gray-800/70 backdrop-blur-md  text-white py-12 px-6 w-full"
     >
-      {/* Left Section - Profile & Info */}
+      
       <motion.div
         initial={{ x: -80, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -76,9 +97,7 @@ function Contact() {
 
           <div className="flex flex-col items-center gap-2">
             <IoIosMail size={28} className="text-cyan-400" />
-            <p className="text-sm md:text-base">
-              vanjoshuaescalante@gmail.com
-            </p>
+            <p className="text-sm md:text-base">vanjoshuaescalante@gmail.com</p>
           </div>
 
           <div className="flex flex-col items-center gap-2">
@@ -103,7 +122,7 @@ function Contact() {
               title={social.title}
               whileHover={{ scale: 1.2, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="text-white hover:text-cyan-400 transition-transform duration-300"
+              className="text-white cursor-target hover:scale-125 hover:text-cyan-400 transition-transform duration-300"
             >
               {social.icon}
             </motion.a>
@@ -111,7 +130,7 @@ function Contact() {
         </motion.div>
       </motion.div>
 
-      {/* Right Section - Contact Form */}
+     {/* Form */}
       <motion.div
         initial={{ x: 80, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -123,6 +142,7 @@ function Contact() {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 150 }}
           className="bg-white text-gray-800 w-full max-w-md rounded-xl shadow-lg px-6 py-8 space-y-5"
+          onSubmit={handleSend}
         >
           <h2 className="text-2xl font-semibold text-center text-blue-600 mb-4">
             Send a Message
@@ -134,7 +154,8 @@ function Contact() {
               <input
                 type="text"
                 placeholder="Enter your name"
-                className="border-2 border-gray-300 rounded-md py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none transition-all"
+                className="border-2 border-gray-300 rounded-md cursor-target py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none transition-all"
+                required
               />
             </div>
 
@@ -143,7 +164,8 @@ function Contact() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="border-2 border-gray-300 rounded-md py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none transition-all"
+                className="border-2 border-gray-300 cursor-target rounded-md py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none transition-all"
+                required
               />
             </div>
 
@@ -152,7 +174,8 @@ function Contact() {
               <input
                 type="text"
                 placeholder="Enter subject"
-                className="border-2 border-gray-300 rounded-md py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none transition-all"
+                className="border-2 border-gray-300 cursor-target rounded-md py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none transition-all"
+                required
               />
             </div>
 
@@ -160,7 +183,8 @@ function Contact() {
               <label className="text-sm font-medium mb-1">Message</label>
               <textarea
                 placeholder="Write your message..."
-                className="border-2 border-gray-300 rounded-md py-2 px-3 h-32 resize-none focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none transition-all"
+                className="border-2 border-gray-300 rounded-md cursor-target py-2 px-3 h-32 resize-none focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none transition-all"
+                required
               />
             </div>
 
@@ -168,7 +192,7 @@ function Contact() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold rounded-md py-2 hover:from-blue-600 hover:to-cyan-500 transition-all duration-300"
+              className="bg-gradient-to-r cursor-target from-blue-500 to-cyan-400 text-white font-semibold rounded-md py-2 hover:from-blue-600 hover:to-cyan-500 transition-all duration-300"
             >
               Send
             </motion.button>

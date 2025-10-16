@@ -80,7 +80,7 @@ function Header() {
         <img
           src={logo}
           alt="van.dev"
-          className="h-8 cursor-pointer"
+          className="h-8 cursor-target"
           onClick={() => handleScrollTo("intro", "/")}
         />
 
@@ -91,7 +91,7 @@ function Header() {
               key={index}
               onClick={() => handleScrollTo(tab.targetId, tab.route)}
               className={clx(
-                "text-md font-semibold px-4 py-2 rounded-sm transition-all duration-300",
+                "text-md font-semibold px-4 py-2 cursor-target rounded-sm transition-all duration-300",
                 activeSection === tab.targetId
                   ? "bg-gradient-to-r from-blue-500 to-cyan-400 text-white"
                   : "hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 hover:text-white"
