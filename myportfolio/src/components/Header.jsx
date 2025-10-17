@@ -6,10 +6,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 function Header() {
   const tabs = [
-    { tabName: "Introduction", targetId: "intro", route: "/" },
-    { tabName: "Tech Stack", targetId: "techstack", route: "/techstack" },
-    { tabName: "Projects", targetId: "projects", route: "/projects" },
-    { tabName: "Contact", targetId: "contact", route: "/contact" },
+    { tabName: "Introduction", targetId: "intro" },
+    { tabName: "Tech Stack", targetId: "techstack" },
+    { tabName: "Projects", targetId: "projects" },
+    { tabName: "Contact", targetId: "contact" },
   ];
 
   const navigate = useNavigate();
@@ -29,12 +29,11 @@ function Header() {
   }, []);
 
   // Smooth scroll handler
-  const handleScrollTo = (targetId, route) => {
+  const handleScrollTo = (targetId) => {
     const section = document.getElementById(targetId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false);
-      navigate(route); // change URL
     }
   };
 
@@ -80,7 +79,7 @@ function Header() {
         <img
           src={logo}
           alt="van.dev"
-          className="h-8 cursor-target"
+          className="h-8 cursor-target cursor-pointer"
           onClick={() => handleScrollTo("intro", "/")}
         />
 
@@ -89,9 +88,9 @@ function Header() {
           {tabs.map((tab, index) => (
             <button
               key={index}
-              onClick={() => handleScrollTo(tab.targetId, tab.route)}
+              onClick={() => handleScrollTo(tab.targetId)}
               className={clx(
-                "text-md font-semibold px-4 py-2 cursor-target rounded-sm transition-all duration-300",
+                "text-md font-semibold px-4 py-2 cursor-target cursor-pointer rounded-sm transition-all duration-300",
                 activeSection === tab.targetId
                   ? "bg-gradient-to-r from-blue-500 to-cyan-400 text-white"
                   : "hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 hover:text-white"
@@ -121,7 +120,7 @@ function Header() {
         {tabs.map((tab, index) => (
           <button
             key={index}
-            onClick={() => handleScrollTo(tab.targetId, tab.route)}
+            onClick={() => handleScrollTo(tab.targetId)}
             className={clx(
               "text-white font-semibold text-md px-4 py-2 rounded-md w-40 text-center transition-all duration-300",
               activeSection === tab.targetId

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 import "@fontsource-variable/inter";
 import Home from "./pages/Home";
 import "./App.css";
 import TargetCursor from "./utils/TargetCursor";
+import Snap from "./pages/Snap";
 
 function App() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -24,14 +25,10 @@ function App() {
   return (
     <>
       {isDesktop && <TargetCursor spinDuration={2} hideDefaultCursor={true} />}
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/techstack" element={<Home />} />
-          <Route path="/projects" element={<Home />} />
-          <Route path="/contact" element={<Home />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Snap />} />
+      </Routes>
     </>
   );
 }

@@ -97,12 +97,12 @@ function Contact() {
 
           <div className="flex flex-col items-center gap-2">
             <IoIosMail size={28} className="text-cyan-400" />
-            <p className="text-sm md:text-base">vanjoshuaescalante@gmail.com</p>
+            <p className="text-sm md:text-base cursor-text">vanjoshuaescalante@gmail.com</p>
           </div>
 
           <div className="flex flex-col items-center gap-2">
             <FaPhoneAlt size={22} className="text-blue-400" />
-            <p className="text-sm md:text-base">(+63) 916-631-4936</p>
+            <p className="text-sm md:text-base cursor-text">(+63) 916-631-4936</p>
           </div>
         </motion.div>
 
@@ -192,7 +192,7 @@ function Contact() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="bg-gradient-to-r cursor-target from-blue-500 to-cyan-400 text-white font-semibold rounded-md py-2 hover:from-blue-600 hover:to-cyan-500 transition-all duration-300"
+              className="bg-gradient-to-r cursor-target cursor-pointer from-blue-500 to-cyan-400 text-white font-semibold rounded-md py-2 hover:from-blue-600 hover:to-cyan-500 transition-all duration-300"
             >
               Send
             </motion.button>

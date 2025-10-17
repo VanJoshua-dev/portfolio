@@ -17,14 +17,13 @@ function Introduction() {
   const navigate = useNavigate();
 
   const handleScroll = () => {
-    navigate("/projects");
     const section = document.getElementById("projects");
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <motion.div
-      className="w-full min-h-screen flex flex-col items-center justify-center px-6 pb-30 pt-10 sm:pt-19 sm:pb-0 text-center sm:text-left"
+      className="w-full min-h-screen flex flex-col items-center justify-center px-6 pb-30 pt-10 sm:pb-0 text-center sm:text-left"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

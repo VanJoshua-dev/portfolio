@@ -120,14 +120,14 @@ function Projects() {
             </div>
 
             <div className="p-5 flex flex-col gap-3">
-              <h3 className="text-xl font-semibold text-blue-400">
+              <h3 className="text-xl cursor-text font-semibold text-blue-400">
                 {project.title}
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm cursor-text leading-relaxed">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mt-2">
+              <div className="flex cursor-text flex-wrap gap-2 mt-2">
                 {project.tech.map((t, i) => (
                   <span
                     key={i}

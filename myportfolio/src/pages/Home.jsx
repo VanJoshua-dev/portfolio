@@ -31,7 +31,7 @@ function Home() {
         {/* Introduction Section */}
         <section
           id="intro"
-          className="col-span-5 h-screen flex justify-center items-center"
+          className="col-span-5 h-screen"
         >
           <Introduction />
         </section>

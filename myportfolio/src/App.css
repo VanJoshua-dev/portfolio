@@ -22,9 +22,7 @@ body{
   font-family: 'Inter Variable', sans-serif;
 }
 
-html:has(#light:check){
-    color-scheme: light;
-}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

@@ -31,7 +31,7 @@ function PathofGrowth() {
       const regex = new RegExp(`(${word})`, "gi");
       updatedText = updatedText.replace(
         regex,
-        `<span class='text-blue-500 font-semibold hover:text-cyan-400 transition-colors duration-200 cursor-pointer'>${word}</span>`
+        `<span class='text-blue-500 font-semibold transition-colors duration-200 cursor-text'>${word}</span>`
       );
     });
     return updatedText;
@@ -50,7 +50,7 @@ function PathofGrowth() {
           PATH OF GROWTH
         </h2>
 
-        <div className="space-y-2 text-justify text-lg leading-relaxed text-gray-400">
+        <div className="space-y-2 cursor-text text-justify text-lg leading-relaxed text-gray-400">
           {paragraphs.map((p, i) => (
             <motion.p
               key={i}
