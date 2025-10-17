@@ -48,7 +48,7 @@ function Snap() {
         className="text-gray-400 max-w-md mb-8"
       >
         It looks like the page you're trying to visit doesn't exist.  
-        Maybe it got moved — or you followed a broken link.
+        Maybe it got moved or you followed a broken link.
       </motion.p>
 
       <motion.button
