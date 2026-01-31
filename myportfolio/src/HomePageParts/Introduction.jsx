@@ -48,7 +48,7 @@ function Introduction() {
 
         {/* Intro Text */}
         <motion.div
-          className="flex flex-col items-center sm:items-start gap-4 w-full sm:max-w-[550px]"
+          className="flex flex-col items-center sm:items-start w-full sm:max-w-[550px]"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -63,12 +63,12 @@ function Introduction() {
             viewport={{ once: true }}
           >
             <span
-              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400 drop-shadow-lg"
-              style={{
-                minHeight: "3.5rem",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
+              className="inline-block text-transparent bg-clip-text bg-gradient-to-r text-3xl md:text-5xl from-blue-500 to-cyan-400 drop-shadow-lg"
+              // style={{
+              //   minHeight: "3.5rem",
+              //   display: "inline-flex",
+              //   alignItems: "center",
+              // }}
             >
               <TextType
                 text={[

@@ -11,6 +11,7 @@ import TechStack from "../HomePageParts/TechStack";
 import PathofGrowth from "../HomePageParts/PathofGrowth";
 import Contact from "../HomePageParts/Contact";
 import Projects from "../HomePageParts/Projects";
+import Tools from "../HomePageParts/Tools";
 function Home() {
   return (
     <div
@@ -43,11 +44,17 @@ function Home() {
           <TechStack />
         </section>
         <section
+          id="tools"
+          className="col-span-5 min-h-screen flex items-center justify-center px-4"
+        >
+          <Tools />
+        </section>
+        {/* <section
           id="path-of-growth"
           className="col-span-5 min-h-screen flex items-center justify-center px-4"
         >
           <PathofGrowth />
-        </section>
+        </section> */}
         <section
           id="projects"
           className="col-span-5 h-screen "

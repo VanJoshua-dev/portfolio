@@ -56,7 +56,7 @@ function Contact() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="flex flex-col md:flex-row items-center justify-center gap-10 bg-gray-800/70 backdrop-blur-md  text-white py-12 px-6 w-full"
+      className="flex flex-col md:flex-row items-center justify-center gap-10 bg-gray-800/70   text-white py-12 px-6 w-full"
     >
       
       <motion.div
@@ -130,7 +130,7 @@ function Contact() {
         </motion.div>
       </motion.div>
 
-     {/* Form */}
+     {/* Form
       <motion.div
         initial={{ x: 80, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -198,7 +198,7 @@ function Contact() {
             </motion.button>
           </div>
         </motion.form>
-      </motion.div>
+      </motion.div> */}
     </motion.section>
   );
 }
