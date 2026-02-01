@@ -92,9 +92,7 @@ function Tools() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-extrabold mb-6 md:mb-10 text-center 
-        bg-gradient-to-r from-blue-500 to-cyan-400 
-        bg-clip-text text-transparent"
+        className="text-3xl md:text-4xl font-extrabold mb-6 md:mb-10 text-center "
       >
         TOOLS & PLATFORMS
       </motion.h1>
@@ -117,7 +115,7 @@ function Tools() {
             <motion.div
               key={i}
               variants={itemVariants}
-              className="flex flex-col items-center justify-center
+              className="flex flex-col items-center border-2 justify-center
               bg-gray-800/50 rounded-xl
               w-25 h-20 md:w-30 md:h-28
               text-xs md:text-base

@@ -6,7 +6,7 @@ function Background() {
       <Squares
         speed={0.5}
         squareSize={40}
-        direction="diagonal"
+        direction="down"
         borderColor="#fff"
         hoverFillColor="#222"
       />

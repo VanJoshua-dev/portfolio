@@ -61,8 +61,9 @@ function TechStack() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-3xl md:text-4xl font-extrabold mb-6 md:mb-10 text-center 
-        bg-gradient-to-r from-blue-500 to-cyan-400 
-        bg-clip-text text-transparent"
+        "
+        // bg-gradient-to-r from-blue-500 to-cyan-400 
+        // bg-clip-text text-transparent
       >
         TECHNOLOGIES
       </motion.h1>
@@ -74,7 +75,7 @@ function TechStack() {
         viewport={{ once: true }}
         className="w-full mb-8"
       >
-        <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center text-cyan-300">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4 bg-gray-900 rounded-sm border text-center text-cyan-300">
           Frontend
         </h2>
 
@@ -89,7 +90,7 @@ function TechStack() {
             <motion.div
               key={i}
               variants={itemVariants}
-              className="flex flex-col items-center justify-center
+              className="flex flex-col items-center border-2  justify-center
               bg-gray-800/50 rounded-xl
               w-20 h-20 md:w-28 md:h-28
               text-xs md:text-base
@@ -109,7 +110,7 @@ function TechStack() {
         viewport={{ once: true }}
         className="w-full"
       >
-        <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center text-green-400">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center border bg-gray-900 rounded-sm text-green-400">
           Backend
         </h2>
 
@@ -124,7 +125,7 @@ function TechStack() {
             <motion.div
               key={i}
               variants={itemVariants}
-              className="flex flex-col items-center justify-center
+              className="flex flex-col items-center border-2 justify-center
               bg-gray-800/50 rounded-xl
               w-20 h-20 md:w-28 md:h-28
               text-xs md:text-base

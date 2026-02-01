@@ -71,7 +71,7 @@ function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl font-bold"
         >
           GET IN TOUCH
         </motion.h1>
@@ -96,12 +96,12 @@ function Contact() {
           <p className="font-semibold text-lg">Contact Information</p>
 
           <div className="flex flex-col items-center gap-2">
-            <IoIosMail size={28} className="text-cyan-400" />
+            <IoIosMail size={28} />
             <p className="text-sm md:text-base cursor-text">vanjoshuaescalante@gmail.com</p>
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <FaPhoneAlt size={22} className="text-blue-400" />
+            <FaPhoneAlt size={22} />
             <p className="text-sm md:text-base cursor-text">(+63) 916-631-4936</p>
           </div>
         </motion.div>

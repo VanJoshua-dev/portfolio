@@ -142,7 +142,7 @@ function Projects() {
       onTouchEnd={handleTouchEnd}
       className="relative min-h-screen flex flex-col items-center justify-center px-6 text-white overflow-hidden"
     >
-      <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-extrabold mb-6 ">
         PROJECTS
       </h1>
 
@@ -157,9 +157,9 @@ function Projects() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="w-full h-full bg-gray-800/50  flex flex-col justify-center items-center rounded-3xl shadow-xl overflow-hidden"
+            className="w-full h-full bg-gray-800/50  flex flex-col border-2 justify-center items-center rounded-3xl shadow-xl overflow-hidden"
           >
-            <div className=" md:h-60 md:w-130 w-auto p-2">
+            <div className=" md:h-60 md:w-130 w-auto p-5">
               <img
                 src={projects[index].image}
                 alt={projects[index].title}
