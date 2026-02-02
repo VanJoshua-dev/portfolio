@@ -107,11 +107,11 @@ function Introduction() {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            I’m Van Joshua Escalante, a 22 years' old currently 4th year BS Information
-            Technology student at Cavite State University – Carmona Campus. I’m
-            a full-stack web developer who enjoys building clean, responsive,
-            and user-friendly web applications, continuously learning new
-            technologies to create meaningful digital solutions.
+            I'm Van Joshua Escalante, 22 years old, currently pursuing a BS in
+            information Technology at Cavite State University—Carmona Campus.
+            I’m a full-stack web developer who enjoys building clean,
+            responsive, and user-friendly web applications, continuously
+            learning new technologies to create meaningful digital solutions.
           </motion.p>
 
           {/* Buttons & Socials */}
