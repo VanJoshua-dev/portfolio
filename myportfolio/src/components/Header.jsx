@@ -77,11 +77,11 @@ function Header() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center cursor-target cursor-pointer">
           <img
             src={logo}
             alt="van.dev"
-            className="h-8 cursor-target cursor-pointer"
+            className="h-8 "
             onClick={() => handleScrollTo("intro", "/")}
           />
           <h1 className="text-2xl font-bold text-white">AN JOSHUA</h1>

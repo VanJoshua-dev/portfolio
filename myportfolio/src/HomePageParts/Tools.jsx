@@ -115,7 +115,7 @@ function Tools() {
             <motion.div
               key={i}
               variants={itemVariants}
-              className="flex flex-col items-center border-2 justify-center
+              className="flex flex-col items-center border-2 border-blue-500 justify-center
               bg-gray-800/50 rounded-xl
               w-25 h-20 md:w-30 md:h-28
               text-xs md:text-base

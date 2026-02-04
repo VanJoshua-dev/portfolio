@@ -122,7 +122,7 @@ function Contact() {
               title={social.title}
               whileHover={{ scale: 1.2, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="text-white cursor-target hover:scale-125 hover:text-cyan-400 transition-transform duration-300"
+              className="text-white cursor-target hover:scale-125 hover:text-blue-500 transition-transform duration-300"
             >
               {social.icon}
             </motion.a>

@@ -142,12 +142,10 @@ function Projects() {
       onTouchEnd={handleTouchEnd}
       className="relative min-h-screen flex flex-col items-center justify-center px-6 text-white overflow-hidden"
     >
-      <h1 className="text-4xl font-extrabold mb-6 ">
-        PROJECTS
-      </h1>
+      <h1 className="text-4xl font-extrabold mb-6 ">PROJECTS</h1>
 
       {/* Project Card */}
-      <div className="relative md:w-150 h-70 min-h-[70vh]">
+      <div className="relative w-full  max-w-7xl min-h-[70vh]">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={index}
@@ -157,57 +155,63 @@ function Projects() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="w-full h-full bg-gray-800/50  flex flex-col border-2 justify-center items-center rounded-3xl shadow-xl overflow-hidden"
+            className="w-full h-full bg-gray-800/60 border-2 border-blue-500 rounded-3xl shadow-2xl overflow-hidden"
           >
-            <div className=" md:h-60 md:w-130 w-auto p-5">
-              <img
-                src={projects[index].image}
-                alt={projects[index].title}
-                className="w-full h-full"
-              />
-            </div>
-
-            <div className="p-8 space-y-4">
-              <h2 className="text-2xl md:text-3xl font-bold text-blue-400">
-                {projects[index].title}
-              </h2>
-
-              <p className="text-gray-300 max-w-3xl">
-                {projects[index].description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {projects[index].tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 text-sm rounded-full bg-gray-700/70 text-cyan-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
+            {/* Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-2 h-150 md:h-100">
+              {/* IMAGE SECTION */}
+              <div className="relative w-full h-[290px] md:h-full">
+                <img
+                  src={projects[index].image}
+                  alt={projects[index].title}
+                  className="absolute inset-0 w-full h-full object-fit"
+                />
               </div>
 
-              <div className="flex gap-4 pt-4">
-                {projects[index].github && (
-                  <a
-                    href={projects[index].github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-5 py-2 border border-blue-500 text-blue-400 cursor-target rounded-lg hover:bg-blue-500 hover:text-white"
-                  >
-                    <FaGithub className="inline mr-2" /> Code
-                  </a>
-                )}
-                {projects[index].live && (
-                  <a
-                    href={projects[index].live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-5 py-2 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white"
-                  >
-                    <FaExternalLinkAlt className="inline mr-2" /> Live
-                  </a>
-                )}
+              {/* CONTENT SECTION */}
+              <div className="p-6 md:p-10 flex flex-col justify-center space-y-5">
+                <h2 className="text-2xl md:text-3xl font-bold text-cyan-400">
+                  {projects[index].title}
+                </h2>
+
+                <p className="text-gray-300 leading-relaxed">
+                  {projects[index].description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {projects[index].tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 text-sm rounded-full bg-gray-700/80 text-cyan-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  {projects[index].github && (
+                    <a
+                      href={projects[index].github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 border border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 cursor-pointer cursor-target hover:text-white transition"
+                    >
+                      <FaGithub className="inline mr-2" /> Code
+                    </a>
+                  )}
+
+                  {projects[index].live && (
+                    <a
+                      href={projects[index].live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 border border-cyan-500 cursor-pointer cursor-target text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition"
+                    >
+                      <FaExternalLinkAlt className="inline mr-2" /> Live
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </motion.div>
@@ -216,14 +220,14 @@ function Projects() {
         {/* Controls */}
         <button
           onClick={prev}
-          className="absolute -left-4 border cursor-pointer cursor-target border-white  top-1/2 -translate-y-1/2 p-3 bg-gray-800/70 hover:bg-gray-600 transition-colors duration-300 rounded-full"
+          className="absolute left-2 md:-left-6 top-40 md:top-50 -translate-y-1/2 p-3 bg-gray-900/70 border border-white rounded-full hover:bg-gray-700 transition"
         >
           <FaChevronLeft />
         </button>
 
         <button
           onClick={next}
-          className="absolute -right-4 border cursor-pointer cursor-target border-white top-1/2 -translate-y-1/2 p-3 bg-gray-800/70 hover:bg-gray-600 transition-colors duration-300 rounded-full"
+          className="absolute right-2 md:-right-6 top-40 md:top-50 -translate-y-1/2 p-3 bg-gray-900/70 border border-white rounded-full hover:bg-gray-700 transition"
         >
           <FaChevronRight />
         </button>

@@ -125,7 +125,7 @@ function Introduction() {
             {/* Projects Button */}
             <motion.button
               onClick={handleScroll}
-              className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 py-2.5 rounded-lg flex items-center gap-2 font-semibold transition-all"
+              className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 py-2.5 rounded-lg flex items-center gap-2 font-semibold cursor-pointer cursor-target transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -142,7 +142,7 @@ function Introduction() {
                   title={social.title}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-blue-500 transition-all"
+                  className="text-white hover:text-blue-500 cursor-target transition-all"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
